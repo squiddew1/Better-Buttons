@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "me.squiddew.betterbuttons.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

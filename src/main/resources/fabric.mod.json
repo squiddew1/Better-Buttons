@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "better-buttons",
+	"version": "${version}",
+	"name": "Better Buttons",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		{
+			"name": "SquidDew (squiddew1)",
+			"contact": {
+				"homepage": "https://modrinth.com/user/squiddew1",
+				"email": "squiddew1@gmail.com"
+			}
+		}
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/betterbuttons",
+		"sources": "https://github.com/squiddew1/Better-Buttons",
+		"issues": "https://github.com/squiddew1/Better-Buttons/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/better-buttons/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"me.squiddew.betterbuttons.client.BetterButtonsClientMod"
+		]
+	},
+	"mixins": [
+		"better-buttons.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": ">=26.3"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.issues": "https://github.com/squiddew1/Better-Buttons/issues",
+				"modmenu.modrinth": "https://modrinth.com/project/betterbuttons"
+			}
+		}
+	}
+}
