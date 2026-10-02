@@ -24,6 +24,9 @@
 	"entrypoints": {
 		"client": [
 			"me.squiddew.betterbuttons.client.BetterButtonsClientMod"
+		],
+		"modmenu": [
+			"me.squiddew.betterbuttons.client.gui.ModMenuIntegration"
 		]
 	},
 	"mixins": [
