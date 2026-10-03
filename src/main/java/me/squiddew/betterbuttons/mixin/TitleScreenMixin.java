@@ -6,6 +6,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
+import me.squiddew.betterbuttons.client.BetterButtonsOptions;
 import me.squiddew.betterbuttons.client.gui.BetterButtonsScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.Button;
@@ -47,12 +48,14 @@ public abstract class TitleScreenMixin {
 
         Screen titleScreen = (TitleScreen) (Object) this;
 
-        Button titleScreenWidget = Button.builder(
-                Component.literal("BB"), _ -> Minecraft.getInstance().gui.setScreen(new BetterButtonsScreen(Component.literal("Better Buttons Screen"), titleScreen))
-        ).bounds(xPos, topPos, 20, 20)
-                .tooltip(Tooltip.create(Component.literal("Better Buttons")))
-                .build();
+        if (BetterButtonsOptions.showTitleScreenButton){
+            Button titleScreenWidget = Button.builder(
+                            Component.literal("BB"), _ -> Minecraft.getInstance().gui.setScreen(new BetterButtonsScreen(Component.literal("Better Buttons Screen"), titleScreen))
+                    ).bounds(xPos, topPos, 20, 20)
+                    .tooltip(Tooltip.create(Component.literal("Better Buttons")))
+                    .build();
 
-        ((ScreenInvoker) this).invokeAddRenderableWidget(titleScreenWidget);
+            ((ScreenInvoker) this).invokeAddRenderableWidget(titleScreenWidget);
+        }
     }
 }
